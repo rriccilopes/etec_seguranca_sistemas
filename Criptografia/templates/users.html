@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários Cadastrados</title>
+</head>
+<body>
+    <h2>Usuários Cadastrados</h2>
+    <table border="0">
+        <tr>
+            <th>ID</th>
+            <th>Usuário</th>
+            <th>Email</th>
+            <th>Senha Armazenada</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user["id"] }}</td>
+            <td>{{ user["username"] }}</td>
+            <td>{{ user["email"] }}</td>
+            <td>{{ user["password"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Voltar ao cadastro</a>
+</body>
+</html>
